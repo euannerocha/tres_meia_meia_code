@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const BotaoColorido = () => {
+export function BotaoColorido() {
   const [cor, setCor] = useState('red');
 
   const trocarCor = () => {
@@ -18,5 +18,3 @@ const BotaoColorido = () => {
     </button>
   );
 };
-
-export default BotaoColorido;
