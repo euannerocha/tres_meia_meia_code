@@ -1,3 +1,6 @@
+//Ideia
+//JavaScript: Implementar um algoritmo de ordenação (Bubble Sort) para ordenar um array de números.
+
 function bubbleSort(array) {
   const tamanho = array.length;
   for (let i = 0; i < tamanho; i++) {

@@ -1,3 +1,6 @@
+//Ideia
+//C#: programa que calcule a média de um array de números.
+
 using System;
 using System.Linq;
 
