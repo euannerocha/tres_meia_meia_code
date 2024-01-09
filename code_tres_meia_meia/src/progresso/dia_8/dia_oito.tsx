@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+//Ideia
+//React: Desenvolver um componente de contador que permita incrementar e decrementar um número.
+
+import { useState } from 'react';
 
 const Contador = () => {
 
