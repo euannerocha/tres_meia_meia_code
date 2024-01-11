@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BotaoColorido } from './progresso/dia_4/dia_quatro'
 import Contador from './progresso/dia_8/dia_oito'
+import Cronometro from './progresso/dia_11/dia_onze'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
       </p>
       <BotaoColorido />
       <Contador/>
+      <Cronometro/>
     </>
   )
 }
