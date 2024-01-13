@@ -1,13 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { BotaoColorido } from './progresso/dia_4/dia_quatro'
-import Contador from './progresso/dia_8/dia_oito'
-import Cronometro from './progresso/dia_11/dia_onze'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { BotaoColorido } from "./progresso/dia_4/dia_quatro";
+import Contador from "./progresso/dia_8/dia_oito";
+import Cronometro from "./progresso/dia_11/dia_onze";
+import BarraProgresso from "./progresso/dia_13/dia_treze";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const [progresso, setProgresso] = useState(0);
+
+  const aumentarProgresso = () => {
+    if (progresso < 100) {
+      setProgresso(progresso + 10);
+    }
+  };
 
   return (
     <>
@@ -31,11 +40,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
       <BotaoColorido />
-      <Contador/>
-      <Cronometro/>
+      <Contador />
+      <Cronometro />
+      <div>
+        <button onClick={aumentarProgresso}>Aumentar Progresso</button>
+        <BarraProgresso valor={progresso} />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
