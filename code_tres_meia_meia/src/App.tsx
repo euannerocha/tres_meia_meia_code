@@ -6,11 +6,13 @@ import { BotaoColorido } from "./progresso/dia_4/dia_quatro";
 import Contador from "./progresso/dia_8/dia_oito";
 import Cronometro from "./progresso/dia_11/dia_onze";
 import BarraProgresso from "./progresso/dia_13/dia_treze";
+import { CountdownTimer } from "./progresso/dia_15/dia_quinze";
 
 function App() {
   const [count, setCount] = useState(0);
-
   const [progresso, setProgresso] = useState(0);
+  const targetDate = '2024-01-29T00:00:00';
+
 
   const aumentarProgresso = () => {
     if (progresso < 100) {
@@ -48,6 +50,10 @@ function App() {
         <button onClick={aumentarProgresso}>Aumentar Progresso</button>
         <BarraProgresso valor={progresso} />
       </div>
+      <div>
+      <h1>Contagem Regressiva</h1>
+      <CountdownTimer targetDate={targetDate} />
+    </div>
     </>
   );
 }
