@@ -1,3 +1,6 @@
+//Ideia
+//Typescript: Criar um componente de countdown para uma data específica.
+
 import React, { useState, useEffect } from 'react';
 
 interface CountdownProps {
