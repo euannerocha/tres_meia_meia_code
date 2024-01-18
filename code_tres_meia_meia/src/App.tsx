@@ -7,12 +7,17 @@ import Contador from "./progresso/dia_8/dia_oito";
 import Cronometro from "./progresso/dia_11/dia_onze";
 import BarraProgresso from "./progresso/dia_13/dia_treze";
 import { CountdownTimer } from "./progresso/dia_15/dia_quinze";
+import desventuras from "../src/assets/desventuras.svg";
+import harryPotter from "../src/assets/harryPotter.svg";
+import theWitcher from "../src/assets/theWitcher.svg";
+import Slider from "./progresso/dia_18/dia_dezoito";
 
 function App() {
   const [count, setCount] = useState(0);
   const [progresso, setProgresso] = useState(0);
-  const targetDate = '2024-01-29T00:00:00';
+  const targetDate = "2024-01-29T00:00:00";
 
+  const imagens = [desventuras, theWitcher, harryPotter];
 
   const aumentarProgresso = () => {
     if (progresso < 100) {
@@ -51,9 +56,13 @@ function App() {
         <BarraProgresso valor={progresso} />
       </div>
       <div>
-      <h1>Contagem Regressiva</h1>
-      <CountdownTimer targetDate={targetDate} />
-    </div>
+        <h1>Contagem Regressiva</h1>
+        <CountdownTimer targetDate={targetDate} />
+      </div>
+      <div>
+        <h1>S.L.I.D.E.R.</h1>
+        <Slider imagens={imagens} />
+      </div>
     </>
   );
 }

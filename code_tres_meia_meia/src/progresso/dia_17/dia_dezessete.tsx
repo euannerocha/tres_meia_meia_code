@@ -1,5 +1,5 @@
 //Ideia
-//ypeScript: Criar um sistema de busca em um array de objetos com tipos específicos (vou usar livros)
+//TypeScript: Criar um sistema de busca em um array de objetos com tipos específicos (vou usar livros)
 
 type Book = {
     id: number;
