@@ -11,6 +11,7 @@ import desventuras from "../src/assets/desventuras.svg";
 import harryPotter from "../src/assets/harryPotter.svg";
 import theWitcher from "../src/assets/theWitcher.svg";
 import Slider from "./progresso/dia_18/dia_dezoito";
+import GuessingGame from "./progresso/dia_21/dia_vinte_e_um";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -62,6 +63,9 @@ function App() {
       <div>
         <h1>S.L.I.D.E.R.</h1>
         <Slider imagens={imagens} />
+      </div>
+      <div>
+      <GuessingGame/>
       </div>
     </>
   );
