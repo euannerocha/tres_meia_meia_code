@@ -1,3 +1,6 @@
+//Ideia
+//React + Typescript: Criar um formulário simples.
+
 import React, { useState } from 'react';
 
 interface LoginFormState {
