@@ -13,6 +13,7 @@ import theWitcher from "../src/assets/theWitcher.svg";
 import Slider from "./progresso/dia_18/dia_dezoito";
 import GuessingGame from "./progresso/dia_21/dia_vinte_e_um";
 import Galeria from "./progresso/dia_22/dia_vinte_e_dois";
+import CalculadoraGorjeta from "./progresso/dia_23/dia_vinte_e_tres";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,10 @@ function App() {
     if (progresso < 100) {
       setProgresso(progresso + 10);
     }
+  };
+
+  const handleCalcularGorjeta = (gorjeta: number, totalPagar: number) => {
+    return `Gorjeta: ${gorjeta}, Total a Pagar: ${totalPagar}`;
   };
 
   return (
@@ -66,10 +71,13 @@ function App() {
         <Slider imagens={imagens} />
       </div>
       <div>
-      <GuessingGame/>
+        <GuessingGame />
       </div>
       <div>
-      <Galeria imagens={imagens}/>
+        <Galeria imagens={imagens} />
+      </div>
+      <div>
+        <CalculadoraGorjeta onCalcularGorjeta={handleCalcularGorjeta} />
       </div>
     </>
   );
