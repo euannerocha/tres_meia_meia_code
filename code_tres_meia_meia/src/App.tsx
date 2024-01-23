@@ -12,6 +12,7 @@ import harryPotter from "../src/assets/harryPotter.svg";
 import theWitcher from "../src/assets/theWitcher.svg";
 import Slider from "./progresso/dia_18/dia_dezoito";
 import GuessingGame from "./progresso/dia_21/dia_vinte_e_um";
+import Galeria from "./progresso/dia_22/dia_vinte_e_dois";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -66,6 +67,9 @@ function App() {
       </div>
       <div>
       <GuessingGame/>
+      </div>
+      <div>
+      <Galeria imagens={imagens}/>
       </div>
     </>
   );

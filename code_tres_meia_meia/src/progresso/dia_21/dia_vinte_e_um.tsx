@@ -1,3 +1,6 @@
+//Ideia
+//React + Typescript: Criar um jogo de adivinhação de npúmero de 1 a 100.
+
 import React, { useState } from 'react';
 
 type GuessingGameState = 'start' | 'won' | 'lost';
