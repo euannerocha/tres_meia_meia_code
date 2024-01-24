@@ -1,7 +1,7 @@
 //Ideia
 //React: Implementar um componente de cronômetro simples (apenas segundos)
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Cronometro = () => {
   const [segundos, setSegundos] = useState(0);

@@ -1,7 +1,7 @@
 //Ideia
 //React + Typescript: Criar um formulário simples.
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface LoginFormState {
   username: string;
@@ -9,10 +9,9 @@ interface LoginFormState {
 }
 
 const LoginForm: React.FC = () => {
-
   const [formData, setFormData] = useState<LoginFormState>({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -25,7 +24,7 @@ const LoginForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
-    console.log('Formulário enviado:', formData);
+    console.log("Formulário enviado:", formData);
   };
 
   return (

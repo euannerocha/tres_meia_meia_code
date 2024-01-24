@@ -2,18 +2,19 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { BotaoColorido } from "./progresso/dia_4/dia_quatro";
-import Contador from "./progresso/dia_8/dia_oito";
-import Cronometro from "./progresso/dia_11/dia_onze";
-import BarraProgresso from "./progresso/dia_13/dia_treze";
-import { CountdownTimer } from "./progresso/dia_15/dia_quinze";
+import { BotaoColorido } from "./progresso/Janeiro/dia_4/dia_quatro";
+import Contador from "./progresso/Janeiro/dia_8/dia_oito";
+import Cronometro from "./progresso/Janeiro/dia_11/dia_onze";
+import BarraProgresso from "./progresso/Janeiro/dia_13/dia_treze";
+import { CountdownTimer } from "./progresso/Janeiro/dia_15/dia_quinze";
 import desventuras from "../src/assets/desventuras.svg";
 import harryPotter from "../src/assets/harryPotter.svg";
 import theWitcher from "../src/assets/theWitcher.svg";
-import Slider from "./progresso/dia_18/dia_dezoito";
-import GuessingGame from "./progresso/dia_21/dia_vinte_e_um";
-import Galeria from "./progresso/dia_22/dia_vinte_e_dois";
-import CalculadoraGorjeta from "./progresso/dia_23/dia_vinte_e_tres";
+import Slider from "./progresso/Janeiro/dia_18/dia_dezoito";
+import GuessingGame from "./progresso/Janeiro/dia_21/dia_vinte_e_um";
+import Galeria from "./progresso/Janeiro/dia_22/dia_vinte_e_dois";
+import CalculadoraGorjeta from "./progresso/Janeiro/dia_23/dia_vinte_e_tres";
+import Formulario from "./progresso/Janeiro/dia_24/dia_vinte_e_quatro";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -78,6 +79,9 @@ function App() {
       </div>
       <div>
         <CalculadoraGorjeta onCalcularGorjeta={handleCalcularGorjeta} />
+      </div>
+      <div>
+        <Formulario />
       </div>
     </>
   );

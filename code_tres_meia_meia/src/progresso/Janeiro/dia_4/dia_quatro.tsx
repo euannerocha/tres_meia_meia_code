@@ -1,7 +1,7 @@
 //Ideia
 //TS e React: criar um componente de botão que troque a cor ao clicar.
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export function BotaoColorido() {
   const [cor, setCor] = useState('red');

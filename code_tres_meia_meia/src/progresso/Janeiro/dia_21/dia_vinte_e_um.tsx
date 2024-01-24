@@ -41,7 +41,7 @@ const GuessingGame: React.FC = () => {
           <p>Tente adivinhar o número entre 1 e 100:</p>
           <input
             type="number"
-            value={guess || ''}
+            value={guess ?? ''}
             onChange={(e) => setGuess(parseInt(e.target.value, 10) || null)}
           />
           <button onClick={handleGuess}>Enviar Palpite</button>
