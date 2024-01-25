@@ -7,16 +7,21 @@ interface ForcaGameProps {
 }
 
 const ForcaGame: React.FC<ForcaGameProps> = ({ palavraSecreta }) => {
+  const [letraDigitada, setLetraDigitada] = useState<string>('');
   const [letrasUsadas, setLetrasUsadas] = useState<string[]>([]);
   const [letrasCorretas, setLetrasCorretas] = useState<string[]>([]);
 
-  const verificarLetra = (letra: string) => {
+  const verificarLetra = () => {
+    const letra = letraDigitada.toUpperCase();
+
     if (!letrasUsadas.includes(letra)) {
       setLetrasUsadas([...letrasUsadas, letra]);
-      if (palavraSecreta.includes(letra)) {
+      if (palavraSecreta.toUpperCase().includes(letra)) {
         setLetrasCorretas([...letrasCorretas, letra]);
       }
     }
+
+    setLetraDigitada('');
   };
 
   return (
@@ -30,8 +35,10 @@ const ForcaGame: React.FC<ForcaGameProps> = ({ palavraSecreta }) => {
         <input
           type="text"
           maxLength={1}
-          onChange={(e) => verificarLetra(e.target.value)}
+          value={letraDigitada}
+          onChange={(e) => setLetraDigitada(e.target.value)}
         />
+        <button onClick={verificarLetra}>Enviar</button>
       </div>
     </div>
   );
