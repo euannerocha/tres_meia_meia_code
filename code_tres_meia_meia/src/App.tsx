@@ -15,6 +15,7 @@ import GuessingGame from "./progresso/Janeiro/dia_21/dia_vinte_e_um";
 import Galeria from "./progresso/Janeiro/dia_22/dia_vinte_e_dois";
 import CalculadoraGorjeta from "./progresso/Janeiro/dia_23/dia_vinte_e_tres";
 import Formulario from "./progresso/Janeiro/dia_24/dia_vinte_e_quatro";
+import ForcaGame from "./progresso/Janeiro/dia_25/ForcaGame";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +33,8 @@ function App() {
   const handleCalcularGorjeta = (gorjeta: number, totalPagar: number) => {
     return `Gorjeta: ${gorjeta}, Total a Pagar: ${totalPagar}`;
   };
+
+  const palavraSecreta = "TYPESCRIPT";
 
   return (
     <>
@@ -82,6 +85,9 @@ function App() {
       </div>
       <div>
         <Formulario />
+      </div>
+      <div>
+        <ForcaGame palavraSecreta={palavraSecreta} />
       </div>
     </>
   );
