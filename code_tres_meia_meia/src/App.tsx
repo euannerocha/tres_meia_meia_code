@@ -16,6 +16,7 @@ import Galeria from "./progresso/Janeiro/dia_22/dia_vinte_e_dois";
 import CalculadoraGorjeta from "./progresso/Janeiro/dia_23/dia_vinte_e_tres";
 import Formulario from "./progresso/Janeiro/dia_24/dia_vinte_e_quatro";
 import ForcaGame from "./progresso/Janeiro/dia_25/ForcaGame";
+import TodoList from "./progresso/Janeiro/dia_26/dia_vinte_e_seis";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -88,6 +89,9 @@ function App() {
       </div>
       <div>
         <ForcaGame palavraSecreta={palavraSecreta} />
+      </div>
+      <div>
+        <TodoList />
       </div>
     </>
   );

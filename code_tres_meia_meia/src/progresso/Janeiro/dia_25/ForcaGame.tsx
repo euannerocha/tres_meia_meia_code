@@ -1,3 +1,6 @@
+//Ideia
+//TypeScript: Desenvolver um validador de formulário com tipos específicos para campos obrigatórios.
+
 import React, { useState } from 'react';
 import Palavras from './Palavras';
 import LetrasUsadas from './LetrasUsadas';
