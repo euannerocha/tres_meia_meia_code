@@ -17,6 +17,7 @@ import CalculadoraGorjeta from "./progresso/Janeiro/dia_23/dia_vinte_e_tres";
 import Formulario from "./progresso/Janeiro/dia_24/dia_vinte_e_quatro";
 import ForcaGame from "./progresso/Janeiro/dia_25/ForcaGame";
 import TodoList from "./progresso/Janeiro/dia_26/dia_vinte_e_seis";
+import ContadorButton from "./progresso/Janeiro/dia_28/dia_vinte_e_oito";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,6 +37,12 @@ function App() {
   };
 
   const palavraSecreta = "TYPESCRIPT";
+
+  const [contador, setContador] = useState<number>(0);
+
+  const handleClick = () => {
+    setContador(contador + 1);
+  };
 
   return (
     <>
@@ -92,6 +99,9 @@ function App() {
       </div>
       <div>
         <TodoList />
+      </div>
+      <div>
+        <ContadorButton onClick={handleClick} contador={contador} />
       </div>
     </>
   );
