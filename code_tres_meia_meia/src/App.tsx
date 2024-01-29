@@ -21,6 +21,7 @@ import ContadorButton from "./progresso/Janeiro/dia_27/dia_vinte_e_sete";
 import FormularioComponent, {
   Form,
 } from "./progresso/Janeiro/dia_28/dia_vinte_e_oito";
+import Calculator from "./progresso/Janeiro/dia_29/dia_vinte_e_nove";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,6 +50,12 @@ function App() {
 
   const handleFormSubmit = (form: Form) => {
     console.log("Formulário válido:", form);
+  };
+
+  const [result, setResult] = useState<number | null>(null);
+
+  const handleResultChange = (newResult: number | null) => {
+    setResult(newResult);
   };
 
   return (
@@ -112,6 +119,10 @@ function App() {
       </div>
       <div>
         <FormularioComponent onSubmit={handleFormSubmit} />
+      </div>
+      <div>
+        <Calculator onResultChange={handleResultChange} />
+        <div className="result">{result !== null ? `= ${result}` : null}</div>
       </div>
     </>
   );
