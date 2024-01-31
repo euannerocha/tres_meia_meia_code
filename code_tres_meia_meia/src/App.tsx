@@ -22,6 +22,7 @@ import FormularioComponent, {
   Form,
 } from "./progresso/Janeiro/dia_28/dia_vinte_e_oito";
 import Calculator from "./progresso/Janeiro/dia_29/dia_vinte_e_nove";
+import CarrinhoDeCompras from "./progresso/Janeiro/dia_30/dia_trinta";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,6 +58,12 @@ function App() {
   const handleResultChange = (newResult: number | null) => {
     setResult(newResult);
   };
+
+  const itens = [
+    { id: 1, nome: "Item 1", preco: 10.99 },
+    { id: 2, nome: "Item 2", preco: 5.49 },
+    { id: 3, nome: "Item 3", preco: 8.79 },
+  ];
 
   return (
     <>
@@ -123,6 +130,9 @@ function App() {
       <div>
         <Calculator onResultChange={handleResultChange} />
         <div className="result">{result !== null ? `= ${result}` : null}</div>
+      </div>
+      <div>
+        <CarrinhoDeCompras itens={itens} />
       </div>
     </>
   );
