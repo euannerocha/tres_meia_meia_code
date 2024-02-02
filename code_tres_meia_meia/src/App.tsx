@@ -23,6 +23,7 @@ import FormularioComponent, {
 } from "./progresso/Janeiro/dia_28/dia_vinte_e_oito";
 import Calculator from "./progresso/Janeiro/dia_29/dia_vinte_e_nove";
 import CarrinhoDeCompras from "./progresso/Janeiro/dia_30/dia_trinta";
+import Board from "./progresso/Fevereiro/dia_32/dia_trinta_e_dois";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -64,6 +65,12 @@ function App() {
     { id: 2, nome: "Item 2", preco: 5.49 },
     { id: 3, nome: "Item 3", preco: 8.79 },
   ];
+
+  const [isXNext, setIsXNext] = useState(true);
+
+  const handleClickGame = () => {
+    setIsXNext(!isXNext);
+  };
 
   return (
     <>
@@ -133,6 +140,9 @@ function App() {
       </div>
       <div>
         <CarrinhoDeCompras itens={itens} />
+      </div>
+      <div>
+        <Board onClick={handleClickGame} />
       </div>
     </>
   );
