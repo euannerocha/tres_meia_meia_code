@@ -24,6 +24,8 @@ import FormularioComponent, {
 import Calculator from "./progresso/Janeiro/dia_29/dia_vinte_e_nove";
 import CarrinhoDeCompras from "./progresso/Janeiro/dia_30/dia_trinta";
 import Board from "./progresso/Fevereiro/dia_32/dia_trinta_e_dois";
+import ThemeToggle from "./progresso/Fevereiro/dia_33/dia_trinta_e_tres";
+import "./progresso/Fevereiro/dia_33/styles.css"
 
 function App() {
   const [count, setCount] = useState(0);
@@ -73,7 +75,7 @@ function App() {
   };
 
   return (
-    <>
+    <div id="root">
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -144,7 +146,10 @@ function App() {
       <div>
         <Board onClick={handleClickGame} />
       </div>
-    </>
+      <div>
+      <ThemeToggle />
+      </div>
+    </div>
   );
 }
 
