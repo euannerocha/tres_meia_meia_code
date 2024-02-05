@@ -1,30 +1,36 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+type Theme = 'dark' | 'light'
 
 const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const defaultTheme = 'light'
 
-  // useEffect(() => {
-  //   const savedTheme = localStorage.getItem('theme');
-  //   if (savedTheme?.valueOf() === 'light') {
-  //     setIsDarkMode(false);
-  //   } else if (savedTheme?.valueOf() === 'dark'){
-  //     setIsDarkMode(true)
-  //   }
-  // }, []);
+  const [themeMode, setThemeMode] = useState<Theme>(() => (localStorage.getItem('theme') as Theme) || defaultTheme);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-theme', themeMode === 'dark');
+    localStorage.setItem('theme', themeMode);
+  }, [themeMode]);
 
   const toggleTheme = () => {
-    // const newTheme = isDarkMode ? 'light' : 'dark';
-    setIsDarkMode(!isDarkMode);
+    setThemeMode((theme) => theme === 'dark' ? 'light' : 'dark');
 
-    // localStorage.setItem('theme', newTheme);
-    document.body.classList.toggle('dark-theme', !isDarkMode);
+    document.body.classList.toggle('dark-theme', true);
   };
+
+  console.log(themeMode)
 
   return (
     <div>
       <label>
-        <input type="checkbox" checked={isDarkMode} onChange={toggleTheme} />
-        Dark Mode
+        <input type="checkbox" checked={themeMode === 'dark'} onChange={toggleTheme} />
+        {
+        themeMode === 'light' 
+        ? 
+        'Dark Mode' 
+        :
+        'Light Mode'
+        }
       </label>
     </div>
   );
