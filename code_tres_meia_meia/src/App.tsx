@@ -25,8 +25,9 @@ import Calculator from "./progresso/Janeiro/dia_29/dia_vinte_e_nove";
 import CarrinhoDeCompras from "./progresso/Janeiro/dia_30/dia_trinta";
 import Board from "./progresso/Fevereiro/dia_32/dia_trinta_e_dois";
 import ThemeToggle from "./progresso/Fevereiro/dia_33/dia_trinta_e_tres";
-import "./progresso/Fevereiro/dia_33/styles.css"
-import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
+import "./progresso/Fevereiro/dia_33/styles.css";
+import ListaDeCompras from "./progresso/Fevereiro/dia_38/dia_trinta_e_oito";
+// import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -75,8 +76,8 @@ function App() {
     setIsXNext(!isXNext);
   };
 
-  const dataChart = [12, 19, 3, 5, 2, 3];
-  const labelsChart = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+  // const dataChart = [12, 19, 3, 5, 2, 3];
+  // const labelsChart = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 
   return (
     <div id="root">
@@ -151,10 +152,11 @@ function App() {
         <Board onClick={handleClickGame} />
       </div>
       <div>
-      <ThemeToggle />
+        <ThemeToggle />
       </div>
+      <div>{/* <BarChart data={dataChart} labels={labelsChart} /> */}</div>
       <div>
-      <BarChart data={dataChart} labels={labelsChart} />
+        <ListaDeCompras />
       </div>
     </div>
   );
