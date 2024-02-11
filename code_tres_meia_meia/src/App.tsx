@@ -27,6 +27,7 @@ import Board from "./progresso/Fevereiro/dia_32/dia_trinta_e_dois";
 import ThemeToggle from "./progresso/Fevereiro/dia_33/dia_trinta_e_tres";
 import "./progresso/Fevereiro/dia_33/styles.css";
 import ListaDeCompras from "./progresso/Fevereiro/dia_38/dia_trinta_e_oito";
+import VideoGallery from "./progresso/Fevereiro/dia_41/dia_quarenta_e_um";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
 function App() {
@@ -157,6 +158,9 @@ function App() {
       <div>{/* <BarChart data={dataChart} labels={labelsChart} /> */}</div>
       <div>
         <ListaDeCompras />
+      </div>
+      <div>
+        <VideoGallery />
       </div>
     </div>
   );
