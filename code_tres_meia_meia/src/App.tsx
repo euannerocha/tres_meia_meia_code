@@ -28,6 +28,7 @@ import ThemeToggle from "./progresso/Fevereiro/dia_33/dia_trinta_e_tres";
 import "./progresso/Fevereiro/dia_33/styles.css";
 import ListaDeCompras from "./progresso/Fevereiro/dia_38/dia_trinta_e_oito";
 import VideoGallery from "./progresso/Fevereiro/dia_41/dia_quarenta_e_um";
+import AnoBissexto from "./progresso/Fevereiro/dia_42/dia_quarenta_e_dois";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
 function App() {
@@ -161,6 +162,9 @@ function App() {
       </div>
       <div>
         <VideoGallery />
+      </div>
+      <div>
+        <AnoBissexto />
       </div>
     </div>
   );
