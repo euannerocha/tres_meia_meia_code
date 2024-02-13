@@ -31,6 +31,8 @@ import VideoGallery from "./progresso/Fevereiro/dia_41/dia_quarenta_e_um";
 import AnoBissexto from "./progresso/Fevereiro/dia_42/dia_quarenta_e_dois";
 import MediaParOuImpar from "./progresso/Fevereiro/dia_43/dia_quarenta_e_tres";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
+// import { Route, Router } from "react-router-dom";
+// import RotaUm from "./components/RotaUm";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -170,6 +172,9 @@ function App() {
       <div>
         <MediaParOuImpar />
       </div>
+      {/* <Router location={""}/>
+        <Route path="/rota_um" Component={RotaUm} />
+    </Router> */}
     </div>
   );
 }

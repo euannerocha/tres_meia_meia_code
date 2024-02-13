@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function MediaParOuImpar() {
   const [valor1, setValor1] = useState('');
