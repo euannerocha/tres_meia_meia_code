@@ -31,8 +31,9 @@ import VideoGallery from "./progresso/Fevereiro/dia_41/dia_quarenta_e_um";
 import AnoBissexto from "./progresso/Fevereiro/dia_42/dia_quarenta_e_dois";
 import MediaParOuImpar from "./progresso/Fevereiro/dia_43/dia_quarenta_e_tres";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
-// import { Route, Router } from "react-router-dom";
-// import RotaUm from "./components/RotaUm";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RotaUm from "./progresso/Fevereiro/dia_44/dia_quarenta_e_quatro";
+// import ButtonGoTo from "./progresso/Fevereiro/dia_45/dia_quarenta_e_cinco";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -85,97 +86,101 @@ function App() {
   // const labelsChart = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 
   return (
-    <div id="root">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <BrowserRouter>
+      <div id="root">
+        <div>
+          <a href="https://vitejs.dev" target="_blank">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </a>
+          <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        </div>
+        <h1>Vite + React</h1>
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </button>
+          <p>
+            Edit <code>src/App.tsx</code> and save to test HMR
+          </p>
+        </div>
+        <p className="read-the-docs">
+          Click on the Vite and React logos to learn more
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
 
-      <BotaoColorido />
-      <Contador />
-      <Cronometro />
-      <div>
-        <button onClick={aumentarProgresso}>Aumentar Progresso</button>
-        <BarraProgresso valor={progresso} />
+        <BotaoColorido />
+        <Contador />
+        <Cronometro />
+        <div>
+          <button onClick={aumentarProgresso}>Aumentar Progresso</button>
+          <BarraProgresso valor={progresso} />
+        </div>
+        <div>
+          <h1>Contagem Regressiva</h1>
+          <CountdownTimer targetDate={targetDate} />
+        </div>
+        <div>
+          <h1>S.L.I.D.E.R.</h1>
+          <Slider imagens={imagens} />
+        </div>
+        <div>
+          <GuessingGame />
+        </div>
+        <div>
+          <Galeria imagens={imagens} />
+        </div>
+        <div>
+          <CalculadoraGorjeta onCalcularGorjeta={handleCalcularGorjeta} />
+        </div>
+        <div>
+          <Formulario />
+        </div>
+        <div>
+          <ForcaGame palavraSecreta={palavraSecreta} />
+        </div>
+        <div>
+          <TodoList />
+        </div>
+        <div>
+          <ContadorButton onClick={handleClick} contador={contador} />
+        </div>
+        <div>
+          <FormularioComponent onSubmit={handleFormSubmit} />
+        </div>
+        <div>
+          <Calculator onResultChange={handleResultChange} />
+          <div className="result">{result !== null ? `= ${result}` : null}</div>
+        </div>
+        <div>
+          <CarrinhoDeCompras itens={itens} />
+        </div>
+        <div>
+          <Board onClick={handleClickGame} />
+        </div>
+        <div>
+          <ThemeToggle />
+        </div>
+        <div>{/* <BarChart data={dataChart} labels={labelsChart} /> */}</div>
+        <div>
+          <ListaDeCompras />
+        </div>
+        <div>
+          <VideoGallery />
+        </div>
+        <div>
+          <AnoBissexto />
+        </div>
+        <div>
+          <MediaParOuImpar />
+        </div>
+        <div>{/* <ButtonGoTo /> */}</div>
+
+        <Routes>
+          <Route path="/rota_um" Component={RotaUm} />
+        </Routes>
       </div>
-      <div>
-        <h1>Contagem Regressiva</h1>
-        <CountdownTimer targetDate={targetDate} />
-      </div>
-      <div>
-        <h1>S.L.I.D.E.R.</h1>
-        <Slider imagens={imagens} />
-      </div>
-      <div>
-        <GuessingGame />
-      </div>
-      <div>
-        <Galeria imagens={imagens} />
-      </div>
-      <div>
-        <CalculadoraGorjeta onCalcularGorjeta={handleCalcularGorjeta} />
-      </div>
-      <div>
-        <Formulario />
-      </div>
-      <div>
-        <ForcaGame palavraSecreta={palavraSecreta} />
-      </div>
-      <div>
-        <TodoList />
-      </div>
-      <div>
-        <ContadorButton onClick={handleClick} contador={contador} />
-      </div>
-      <div>
-        <FormularioComponent onSubmit={handleFormSubmit} />
-      </div>
-      <div>
-        <Calculator onResultChange={handleResultChange} />
-        <div className="result">{result !== null ? `= ${result}` : null}</div>
-      </div>
-      <div>
-        <CarrinhoDeCompras itens={itens} />
-      </div>
-      <div>
-        <Board onClick={handleClickGame} />
-      </div>
-      <div>
-        <ThemeToggle />
-      </div>
-      <div>{/* <BarChart data={dataChart} labels={labelsChart} /> */}</div>
-      <div>
-        <ListaDeCompras />
-      </div>
-      <div>
-        <VideoGallery />
-      </div>
-      <div>
-        <AnoBissexto />
-      </div>
-      <div>
-        <MediaParOuImpar />
-      </div>
-      {/* <Router location={""}/>
-        <Route path="/rota_um" Component={RotaUm} />
-    </Router> */}
-    </div>
+    </BrowserRouter>
   );
 }
 
