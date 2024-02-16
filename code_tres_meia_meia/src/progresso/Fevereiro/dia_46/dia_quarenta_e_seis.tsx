@@ -1,1 +1,1 @@
-// Dia 55 - React: Criar um componente de modal reutilizável para exibir informações adicionais.
+//organizei o código e as rotas
