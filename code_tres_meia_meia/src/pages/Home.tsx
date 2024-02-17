@@ -28,6 +28,8 @@ import ListaDeCompras from "../progresso/Fevereiro/dia_38/dia_trinta_e_oito";
 import VideoGallery from "../progresso/Fevereiro/dia_41/dia_quarenta_e_um";
 import AnoBissexto from "../progresso/Fevereiro/dia_42/dia_quarenta_e_dois";
 import MediaParOuImpar from "../progresso/Fevereiro/dia_43/dia_quarenta_e_tres";
+import Button from "../progresso/Fevereiro/dia_47/button";
+import Modal from "../progresso/Fevereiro/dia_47/dia_quarenta_e_sete";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -77,6 +79,16 @@ function Home() {
     setIsXNext(!isXNext);
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   // const dataChart = [12, 19, 3, 5, 2, 3];
   // const labelsChart = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 
@@ -119,6 +131,15 @@ function Home() {
       <MediaParOuImpar />
 
       <div>{/* <ButtonGoTo /> */}</div>
+
+      <div>
+        <h1>Meu App</h1>
+        <Button onClick={openModal} children="Abrir Modal" />
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+          <h2>Olá, eu sou um modal!</h2>
+          <p>{`Espero que tenha gostado :)`}</p>
+        </Modal>
+      </div>
     </div>
   );
 }
