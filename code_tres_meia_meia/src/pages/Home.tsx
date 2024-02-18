@@ -45,6 +45,10 @@ function Home() {
     }
   };
 
+  const zerarProgresso = () => {
+    setProgresso(0)
+  };
+
   const handleCalcularGorjeta = (gorjeta: number, totalPagar: number) => {
     return `Gorjeta: ${gorjeta}, Total a Pagar: ${totalPagar}`;
   };
@@ -99,6 +103,7 @@ function Home() {
       <Cronometro />
 
       <button onClick={aumentarProgresso}>Aumentar Progresso</button>
+      <button onClick={zerarProgresso}>Zerar Progresso</button>
       <BarraProgresso valor={progresso} />
 
       <h1>Contagem Regressiva</h1>
