@@ -30,6 +30,7 @@ import AnoBissexto from "../progresso/Fevereiro/dia_42/dia_quarenta_e_dois";
 import MediaParOuImpar from "../progresso/Fevereiro/dia_43/dia_quarenta_e_tres";
 import Button from "../progresso/Fevereiro/dia_47/button";
 import Modal from "../progresso/Fevereiro/dia_47/dia_quarenta_e_sete";
+import FactorialCalculator from "../progresso/Fevereiro/dia_50/dia_cinquenta";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -46,7 +47,7 @@ function Home() {
   };
 
   const zerarProgresso = () => {
-    setProgresso(0)
+    setProgresso(0);
   };
 
   const handleCalcularGorjeta = (gorjeta: number, totalPagar: number) => {
@@ -91,6 +92,12 @@ function Home() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const [factorialResult, setFactorialResult] = useState<number | null>(null);
+
+  const handleFactorialCalculated = (result: number) => {
+    setFactorialResult(result);
   };
 
   // const dataChart = [12, 19, 3, 5, 2, 3];
@@ -144,6 +151,13 @@ function Home() {
           <h2>Olá, eu sou um modal!</h2>
           <p>{`Espero que tenha gostado :)`}</p>
         </Modal>
+      </div>
+
+      <div>
+        <FactorialCalculator
+          onFactorialCalculated={handleFactorialCalculated}
+        />
+        {factorialResult !== null && <p>O fatorial do número solicitado é: {factorialResult}</p>}
       </div>
     </div>
   );
