@@ -33,6 +33,7 @@ import Modal from "../progresso/Fevereiro/dia_47/dia_quarenta_e_sete";
 import FactorialCalculator from "../progresso/Fevereiro/dia_50/dia_cinquenta";
 import OrdenarNumeros from "../progresso/Fevereiro/dia_51/dia_cinquenta_e_um";
 import NavigationBar from "../progresso/Fevereiro/dia_52/dia_cinquenta_e_dois";
+import AcerteALetra from "../progresso/Fevereiro/dia_53/dia_cinquenta_e_tres";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -166,6 +167,7 @@ function Home() {
 
       <OrdenarNumeros />
       <NavigationBar/>
+      <AcerteALetra/>
     </div>
   );
 }
