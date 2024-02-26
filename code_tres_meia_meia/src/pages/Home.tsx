@@ -37,6 +37,7 @@ import AcerteALetra from "../progresso/Fevereiro/dia_53/dia_cinquenta_e_tres";
 import ContactForm from "../progresso/Fevereiro/dia_54/dia_cinquenta_e_quatro";
 import ShoppingCart from "../progresso/Fevereiro/dia_55/dia_cinquenta_e_cinco";
 import TerceiroGrauCalculator from "../progresso/Fevereiro/dia_56/dia_cinquenta_e_seis";
+import RegraDeTres from "../progresso/Fevereiro/dia_57/dia_cinquenta_e_sete";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -174,6 +175,7 @@ function Home() {
       <ContactForm/>
       <ShoppingCart/>
       <TerceiroGrauCalculator/>
+      <RegraDeTres/>
     </div>
   );
 }
