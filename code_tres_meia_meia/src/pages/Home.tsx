@@ -40,6 +40,7 @@ import TerceiroGrauCalculator from "../progresso/Fevereiro/dia_56/dia_cinquenta_
 import RegraDeTres from "../progresso/Fevereiro/dia_57/dia_cinquenta_e_sete";
 import EmailValidation from "../progresso/Fevereiro/dia_58/dia_cinquenta_e_oito";
 import WordCounter from "../progresso/Fevereiro/dia_59/dia_cinquenta_e_nove";
+import EmailForm from "../progresso/Fevereiro/dia_60/dia_sessenta";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -172,14 +173,15 @@ function Home() {
       </div>
 
       <OrdenarNumeros />
-      <NavigationBar/>
-      <AcerteALetra/>
-      <ContactForm/>
-      <ShoppingCart/>
-      <TerceiroGrauCalculator/>
-      <RegraDeTres/>
-      <EmailValidation/>
-      <WordCounter/>
+      <NavigationBar />
+      <AcerteALetra />
+      <ContactForm />
+      <ShoppingCart />
+      <TerceiroGrauCalculator />
+      <RegraDeTres />
+      <EmailValidation />
+      <WordCounter />
+      <EmailForm />
     </div>
   );
 }
