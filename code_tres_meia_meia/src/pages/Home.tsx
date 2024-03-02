@@ -41,6 +41,7 @@ import RegraDeTres from "../progresso/Fevereiro/dia_57/dia_cinquenta_e_sete";
 import EmailValidation from "../progresso/Fevereiro/dia_58/dia_cinquenta_e_oito";
 import WordCounter from "../progresso/Fevereiro/dia_59/dia_cinquenta_e_nove";
 import EmailForm from "../progresso/Fevereiro/dia_60/dia_sessenta";
+import MotivationalButton from "../progresso/Marco/dia_61/dia_sessenta_e_um";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -182,6 +183,7 @@ function Home() {
       <EmailValidation />
       <WordCounter />
       <EmailForm />
+      <MotivationalButton />
     </div>
   );
 }
