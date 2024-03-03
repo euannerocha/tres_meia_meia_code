@@ -43,6 +43,7 @@ import WordCounter from "../progresso/Fevereiro/dia_59/dia_cinquenta_e_nove";
 import EmailForm from "../progresso/Fevereiro/dia_60/dia_sessenta";
 import MotivationalButton from "../progresso/Marco/dia_61/dia_sessenta_e_um";
 import FrasesButton from "../progresso/Marco/dia_62/dia_sessenta_e_dois";
+import Clock from "../progresso/Marco/dia_63/dia_sessenta_e_tres";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -186,6 +187,7 @@ function Home() {
       <EmailForm />
       <MotivationalButton />
       <FrasesButton />
+      <Clock />
     </div>
   );
 }
