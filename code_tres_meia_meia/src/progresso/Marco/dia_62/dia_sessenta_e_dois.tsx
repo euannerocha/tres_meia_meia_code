@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 
-const frasesButton: React.FC = () => {
+const FrasesButton: React.FC = () => {
   const frases: string[] = [
-"Vai te fuder",
-"Eu gosto de peixe",
-"Eu amo xis",
-"Pega no meu pau"
-    ];
+    "A vida é linda, mas às vezes não.",
+    "Eu gosto de peixe.",
+    "Eu amo xis.",
+  ];
 
-  const [fraseDoMomento,setFraseDoMomento] = useState<string>(
-    frases[0]
-  );
+  const [fraseDoMomento, setFraseDoMomento] = useState<string>(frases[0]);
 
   const handleClick = () => {
     const randomIndex = Math.floor(Math.random() * frases.length);
@@ -25,4 +22,4 @@ const frasesButton: React.FC = () => {
   );
 };
 
-export default frasesButton;
+export default FrasesButton;
