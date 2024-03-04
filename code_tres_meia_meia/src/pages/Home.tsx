@@ -44,6 +44,7 @@ import EmailForm from "../progresso/Fevereiro/dia_60/dia_sessenta";
 import MotivationalButton from "../progresso/Marco/dia_61/dia_sessenta_e_um";
 import FrasesButton from "../progresso/Marco/dia_62/dia_sessenta_e_dois";
 import Clock from "../progresso/Marco/dia_63/dia_sessenta_e_tres";
+import Calendar from "../progresso/Marco/dia_64/dia_sessenta_e_quatro";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -115,6 +116,12 @@ function Home() {
 
   // const dataChart = [12, 19, 3, 5, 2, 3];
   // const labelsChart = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+
+  const handleSelectDate = (date: Date) => {
+    setSelectedDate(date);
+  };
 
   return (
     <div id="root">
@@ -188,6 +195,14 @@ function Home() {
       <MotivationalButton />
       <FrasesButton />
       <Clock />
+
+      <div>
+        <h1>Selecione uma data:</h1>
+        <Calendar onSelectDate={handleSelectDate} />
+        {selectedDate && (
+          <p>Data selecionada: {selectedDate.toLocaleDateString()}</p>
+        )}
+      </div>
     </div>
   );
 }
