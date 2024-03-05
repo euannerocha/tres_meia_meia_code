@@ -45,6 +45,7 @@ import MotivationalButton from "../progresso/Marco/dia_61/dia_sessenta_e_um";
 import FrasesButton from "../progresso/Marco/dia_62/dia_sessenta_e_dois";
 import Clock from "../progresso/Marco/dia_63/dia_sessenta_e_tres";
 import Calendar from "../progresso/Marco/dia_64/dia_sessenta_e_quatro";
+import CircularProgress from "../progresso/Marco/dia_65/dia_sessenta_e_cinco";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -203,6 +204,8 @@ function Home() {
           <p>Data selecionada: {selectedDate.toLocaleDateString()}</p>
         )}
       </div>
+
+      <CircularProgress size={100} progress={50} strokeWidth={6} />
     </div>
   );
 }
