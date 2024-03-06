@@ -46,6 +46,7 @@ import FrasesButton from "../progresso/Marco/dia_62/dia_sessenta_e_dois";
 import Clock from "../progresso/Marco/dia_63/dia_sessenta_e_tres";
 import Calendar from "../progresso/Marco/dia_64/dia_sessenta_e_quatro";
 import CircularProgress from "../progresso/Marco/dia_65/dia_sessenta_e_cinco";
+import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -123,6 +124,11 @@ function Home() {
   const handleSelectDate = (date: Date) => {
     setSelectedDate(date);
   };
+
+  const locations = [
+    { latitude: 51.505, longitude: -0.09, name: "London" },
+    { latitude: 40.7128, longitude: -74.006, name: "New York" },
+  ];
 
   return (
     <div id="root">
@@ -206,6 +212,7 @@ function Home() {
       </div>
 
       <CircularProgress size={100} progress={50} strokeWidth={6} />
+      <InteractiveMap locations={locations} />
     </div>
   );
 }
