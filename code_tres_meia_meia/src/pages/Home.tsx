@@ -48,6 +48,7 @@ import Calendar from "../progresso/Marco/dia_64/dia_sessenta_e_quatro";
 import CircularProgress from "../progresso/Marco/dia_65/dia_sessenta_e_cinco";
 import DropdownMenu from "../progresso/Marco/dia_67/dia_sessenta_e_sete";
 import Saudacao from "../progresso/Marco/dia_68/dia_sessenta_e_oito";
+import ConfirmDialog from "../progresso/Marco/dia_69/dia_sessenta_e_nove";
 
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -217,6 +218,12 @@ function Home() {
       {/* <InteractiveMap locations={locations} /> */}
       <DropdownMenu />
       <Saudacao nome={"Forasteiro"} />
+      <ConfirmDialog
+        message={"Você confirma que clicou aqui??"}
+        onConfirm={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
     </div>
   );
 }
