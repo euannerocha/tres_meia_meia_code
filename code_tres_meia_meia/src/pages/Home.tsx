@@ -224,6 +224,7 @@ function Home() {
           throw new Error("Function not implemented.");
         }}
       />
+      <CommentList />
     </div>
   );
 }
