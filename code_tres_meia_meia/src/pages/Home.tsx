@@ -50,6 +50,7 @@ import DropdownMenu from "../progresso/Marco/dia_67/dia_sessenta_e_sete";
 import Saudacao from "../progresso/Marco/dia_68/dia_sessenta_e_oito";
 import ConfirmDialog from "../progresso/Marco/dia_69/dia_sessenta_e_nove";
 import CommentList from "../progresso/Marco/dia_70/dia_setenta";
+import CharacterCounter from "../progresso/Marco/dia_71/dia_setenta_e_um";
 
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -226,6 +227,7 @@ function Home() {
         }}
       />
       <CommentList />
+      <CharacterCounter />
     </div>
   );
 }
