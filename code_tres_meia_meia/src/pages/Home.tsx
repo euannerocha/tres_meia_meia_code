@@ -51,6 +51,7 @@ import Saudacao from "../progresso/Marco/dia_68/dia_sessenta_e_oito";
 import ConfirmDialog from "../progresso/Marco/dia_69/dia_sessenta_e_nove";
 import CommentList from "../progresso/Marco/dia_70/dia_setenta";
 import CharacterCounter from "../progresso/Marco/dia_71/dia_setenta_e_um";
+import SocialShareButtons from "../progresso/Marco/dia_72/dia_setenta_e_dois";
 
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -134,6 +135,9 @@ function Home() {
   //   { latitude: 51.505, longitude: -0.09, name: "London" },
   //   { latitude: 40.7128, longitude: -74.006, name: "New York" },
   // ];
+
+  const title = "";
+  const url = "";
 
   return (
     <div id="root">
@@ -228,6 +232,7 @@ function Home() {
       />
       <CommentList />
       <CharacterCounter />
+      <SocialShareButtons url={url} title={title} />
     </div>
   );
 }
