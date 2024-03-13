@@ -52,6 +52,8 @@ import ConfirmDialog from "../progresso/Marco/dia_69/dia_sessenta_e_nove";
 import CommentList from "../progresso/Marco/dia_70/dia_setenta";
 import CharacterCounter from "../progresso/Marco/dia_71/dia_setenta_e_um";
 import SocialShareButtons from "../progresso/Marco/dia_72/dia_setenta_e_dois";
+import { TaskListComponent } from "../progresso/Marco/dia_73/taskComponent";
+import { Task } from "../progresso/Marco/dia_73/dia_setenta_e_tres";
 
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -138,6 +140,26 @@ function Home() {
 
   const title = "";
   const url = "";
+
+  const [tasks, setTasks] = useState<Task[]>([
+    { id: 1, title: "Main Task 1", subtasks: [] },
+    { id: 2, title: "Main Task 2", subtasks: [] },
+  ]);
+
+  const handleAddSubtask = (taskId: number, subtaskTitle: string) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        const newSubtask = {
+          id: task.subtasks.length + 1,
+          title: subtaskTitle,
+          subtasks: [],
+        };
+        return { ...task, subtasks: [...task.subtasks, newSubtask] };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  };
 
   return (
     <div id="root">
@@ -233,6 +255,7 @@ function Home() {
       <CommentList />
       <CharacterCounter />
       <SocialShareButtons url={url} title={title} />
+      <TaskListComponent tasks={tasks} onAddSubtask={handleAddSubtask} />
     </div>
   );
 }
