@@ -54,6 +54,8 @@ import CharacterCounter from "../progresso/Marco/dia_71/dia_setenta_e_um";
 import SocialShareButtons from "../progresso/Marco/dia_72/dia_setenta_e_dois";
 import { TaskListComponent } from "../progresso/Marco/dia_73/taskComponent";
 import { Task } from "../progresso/Marco/dia_73/dia_setenta_e_tres";
+import { ITask } from "../progresso/Marco/dia_74/dia_setenta_e_quatro";
+import { TaskHierarchy } from "../progresso/Marco/dia_74/testHierarchy";
 
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -161,6 +163,15 @@ function Home() {
     setTasks(updatedTasks);
   };
 
+  const tasksList: ITask[] = [
+    { id: 1, title: "Tarefa 1", completed: false, level: 0 },
+    { id: 2, title: "Subtarefa 1.1", completed: false, level: 1 },
+    { id: 3, title: "Subtarefa 1.2", completed: false, level: 1 },
+    { id: 4, title: "Tarefa 2", completed: false, level: 0 },
+    { id: 5, title: "Subtarefa 2.1", completed: false, level: 1 },
+    { id: 6, title: "Subtarefa 2.2", completed: false, level: 1 },
+  ];
+
   return (
     <div id="root">
       <BotaoColorido />
@@ -256,6 +267,7 @@ function Home() {
       <CharacterCounter />
       <SocialShareButtons url={url} title={title} />
       <TaskListComponent tasks={tasks} onAddSubtask={handleAddSubtask} />
+      <TaskHierarchy tasks={tasksList} />
     </div>
   );
 }
