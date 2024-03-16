@@ -56,7 +56,7 @@ import { TaskListComponent } from "../progresso/Marco/dia_73/taskComponent";
 import { Task } from "../progresso/Marco/dia_73/dia_setenta_e_tres";
 import { ITask } from "../progresso/Marco/dia_74/dia_setenta_e_quatro";
 import { TaskHierarchy } from "../progresso/Marco/dia_74/testHierarchy";
-
+// import MyComponent from "../progresso/Marco/dia_75/myComponent";
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
 
@@ -268,6 +268,7 @@ function Home() {
       <SocialShareButtons url={url} title={title} />
       <TaskListComponent tasks={tasks} onAddSubtask={handleAddSubtask} />
       <TaskHierarchy tasks={tasksList} />
+      {/* <MyComponent /> */}
     </div>
   );
 }
