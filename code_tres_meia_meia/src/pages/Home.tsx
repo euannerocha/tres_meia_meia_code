@@ -57,6 +57,7 @@ import { Task } from "../progresso/Marco/dia_73/dia_setenta_e_tres";
 import { ITask } from "../progresso/Marco/dia_74/dia_setenta_e_quatro";
 import { TaskHierarchy } from "../progresso/Marco/dia_74/testHierarchy";
 import Stopwatch from "../progresso/Marco/dia_77/dia_setenta_e_sete";
+import FloatingActionButton from "../progresso/Marco/dia_78/dia_setenta_e_oito";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -271,6 +272,7 @@ function Home() {
       <TaskHierarchy tasks={tasksList} />
       {/* <MyComponent /> */}
       <Stopwatch />
+      <FloatingActionButton />
     </div>
   );
 }
