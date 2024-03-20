@@ -59,6 +59,7 @@ import { TaskHierarchy } from "../progresso/Marco/dia_74/testHierarchy";
 import Stopwatch from "../progresso/Marco/dia_77/dia_setenta_e_sete";
 import FloatingActionButton from "../progresso/Marco/dia_78/dia_setenta_e_oito";
 import Tooltip from "../progresso/Marco/dia_79/dia_setenta_e_nove";
+// import ScrollToTopButton from "../progresso/Marco/dia_80/dia_oitenta";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
 // import BarChart from "./progresso/Fevereiro/dia_37/dia_trinta_e_sete";
@@ -180,17 +181,13 @@ function Home() {
       <BotaoColorido />
       <Contador />
       <Cronometro />
-
       <button onClick={aumentarProgresso}>Aumentar Progresso</button>
       <button onClick={zerarProgresso}>Zerar Progresso</button>
       <BarraProgresso valor={progresso} />
-
       <h1>Contagem Regressiva</h1>
       <CountdownTimer targetDate={targetDate} />
-
       <h1>S.L.I.D.E.R.</h1>
       <Slider imagens={imagens} />
-
       <GuessingGame />
       <Galeria imagens={imagens} />
       <CalculadoraGorjeta onCalcularGorjeta={handleCalcularGorjeta} />
@@ -200,22 +197,16 @@ function Home() {
       <ContadorButton onClick={handleClick} contador={contador} />
       <FormularioComponent onSubmit={handleFormSubmit} />
       <Calculator onResultChange={handleResultChange} />
-
       <div className="result">{result !== null ? `= ${result}` : null}</div>
-
       <CarrinhoDeCompras itens={itens} />
       <Board onClick={handleClickGame} />
       <ThemeToggle />
-
       <div>{/* <BarChart data={dataChart} labels={labelsChart} /> */}</div>
-
       <ListaDeCompras />
       <VideoGallery />
       <AnoBissexto />
       <MediaParOuImpar />
-
       <div>{/* <ButtonGoTo /> */}</div>
-
       <div>
         <h1>Meu App</h1>
         <Button onClick={openModal} children="Abrir Modal" />
@@ -224,7 +215,6 @@ function Home() {
           <p>{`Espero que tenha gostado :)`}</p>
         </Modal>
       </div>
-
       <div>
         <FactorialCalculator
           onFactorialCalculated={handleFactorialCalculated}
@@ -233,7 +223,6 @@ function Home() {
           <p>O fatorial do número solicitado é: {factorialResult}</p>
         )}
       </div>
-
       <OrdenarNumeros />
       <NavigationBar />
       <AcerteALetra />
@@ -247,7 +236,6 @@ function Home() {
       <MotivationalButton />
       <FrasesButton />
       <Clock />
-
       <div>
         <h1>Selecione uma data:</h1>
         <Calendar onSelectDate={handleSelectDate} />
@@ -255,7 +243,6 @@ function Home() {
           <p>Data selecionada: {selectedDate.toLocaleDateString()}</p>
         )}
       </div>
-
       <CircularProgress size={100} progress={50} strokeWidth={6} />
       {/* <InteractiveMap locations={locations} /> */}
       <DropdownMenu />
@@ -274,12 +261,12 @@ function Home() {
       {/* <MyComponent /> */}
       <Stopwatch />
       <FloatingActionButton />
-
       <div>
         <Tooltip text="Olá! Eu sou um tooltip!!">
           <button>Passe o mouse aqui</button>
         </Tooltip>
       </div>
+      {/* <ScrollToTopButton /> */}
     </div>
   );
 }
