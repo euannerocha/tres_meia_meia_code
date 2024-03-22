@@ -60,6 +60,7 @@ import Stopwatch from "../progresso/Marco/dia_77/dia_setenta_e_sete";
 import FloatingActionButton from "../progresso/Marco/dia_78/dia_setenta_e_oito";
 import Tooltip from "../progresso/Marco/dia_79/dia_setenta_e_nove";
 import NotificationList from "../progresso/Marco/dia_81/dia_oitenta_e_um";
+import { InputColor } from "../progresso/Marco/dia_82/dia_oitenta_e_dois";
 // import ScrollToTopButton from "../progresso/Marco/dia_80/dia_oitenta";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
@@ -269,6 +270,7 @@ function Home() {
       </div>
       {/* <ScrollToTopButton /> */}
       <NotificationList />
+      <InputColor />
     </div>
   );
 }
