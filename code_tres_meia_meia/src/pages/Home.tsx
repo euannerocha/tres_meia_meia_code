@@ -61,6 +61,8 @@ import FloatingActionButton from "../progresso/Marco/dia_78/dia_setenta_e_oito";
 import Tooltip from "../progresso/Marco/dia_79/dia_setenta_e_nove";
 import NotificationList from "../progresso/Marco/dia_81/dia_oitenta_e_um";
 import { InputColor } from "../progresso/Marco/dia_82/dia_oitenta_e_dois";
+import Autocomplete from "../progresso/Marco/dia_83/dia_oitenta_e_tres";
+
 // import ScrollToTopButton from "../progresso/Marco/dia_80/dia_oitenta";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
 // import InteractiveMap from "../progresso/Marco/dia_66/dia_sessenta_e_seis";
@@ -178,6 +180,35 @@ function Home() {
     { id: 6, title: "Subtarefa 2.2", completed: false, level: 1 },
   ];
 
+  const suggestions: string[] = [
+    "Amor",
+    "Borboleta",
+    "Casa",
+    "Diamante",
+    "Escola",
+    "Fogo",
+    "Gato",
+    "História",
+    "Ilha",
+    "Janela",
+    "Kiwi",
+    "Lua",
+    "Montanha",
+    "Noite",
+    "Oceano",
+    "Pássaro",
+    "Queijo",
+    "Rio",
+    "Sol",
+    "Terra",
+    "Universo",
+    "Vento",
+    "Whisky",
+    "Xadrez",
+    "Yacht",
+    "Zebra",
+  ];
+
   return (
     <div id="root">
       <BotaoColorido />
@@ -271,6 +302,7 @@ function Home() {
       {/* <ScrollToTopButton /> */}
       <NotificationList />
       <InputColor />
+      <Autocomplete suggestions={suggestions} />
     </div>
   );
 }
