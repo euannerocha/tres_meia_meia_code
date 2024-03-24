@@ -302,7 +302,9 @@ function Home() {
       {/* <ScrollToTopButton /> */}
       <NotificationList />
       <InputColor />
-      <Autocomplete suggestions={suggestions} />
+      <div>
+        <Autocomplete suggestions={suggestions} />
+      </div>
     </div>
   );
 }

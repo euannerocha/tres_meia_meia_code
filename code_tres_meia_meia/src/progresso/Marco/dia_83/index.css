@@ -1,0 +1,19 @@
+.suggestions {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.suggestions li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.suggestions li.suggestion-active,
+.suggestions li:hover {
+  background-color: #eee;
+}
+
+.no-suggestions {
+  padding: 0.5rem;
+  color: #999;
+}

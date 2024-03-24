@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, KeyboardEvent } from "react";
+import "./index.css";
 
 interface AutocompleteProps {
   suggestions: string[];
