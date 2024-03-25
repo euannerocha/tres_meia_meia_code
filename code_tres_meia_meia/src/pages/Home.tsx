@@ -62,6 +62,7 @@ import Tooltip from "../progresso/Marco/dia_79/dia_setenta_e_nove";
 import NotificationList from "../progresso/Marco/dia_81/dia_oitenta_e_um";
 import { InputColor } from "../progresso/Marco/dia_82/dia_oitenta_e_dois";
 import Autocomplete from "../progresso/Marco/dia_83/dia_oitenta_e_tres";
+import FileUpload from "../progresso/Marco/dia_85";
 
 // import ScrollToTopButton from "../progresso/Marco/dia_80/dia_oitenta";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
@@ -209,6 +210,10 @@ function Home() {
     "Zebra",
   ];
 
+  const handleFileSelect = (file: File) => {
+    console.log("File selected:", file);
+  };
+
   return (
     <div id="root">
       <BotaoColorido />
@@ -305,6 +310,7 @@ function Home() {
       <div>
         <Autocomplete suggestions={suggestions} />
       </div>
+      <FileUpload onFileSelect={handleFileSelect} />
     </div>
   );
 }
