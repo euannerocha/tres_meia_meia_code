@@ -63,6 +63,7 @@ import NotificationList from "../progresso/Marco/dia_81/dia_oitenta_e_um";
 import { InputColor } from "../progresso/Marco/dia_82/dia_oitenta_e_dois";
 import Autocomplete from "../progresso/Marco/dia_83/dia_oitenta_e_tres";
 import FileUpload from "../progresso/Marco/dia_85";
+import { ButtonGoToRotaUm } from "../progresso/Marco/dia_87";
 
 // import ScrollToTopButton from "../progresso/Marco/dia_80/dia_oitenta";
 // import MyComponent from "../progresso/Marco/dia_75/myComponent";
@@ -216,6 +217,7 @@ function Home() {
 
   return (
     <div id="root">
+      <ButtonGoToRotaUm />
       <BotaoColorido />
       <Contador />
       <Cronometro />
