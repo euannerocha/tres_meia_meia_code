@@ -3,6 +3,7 @@ import React from "react";
 import { ButtonGoToHome } from "../../Marco/dia_88";
 import { MinhaAltura } from "../../Marco/dia_89";
 import Playlist from "../../Abril/dia_97";
+import Termometro from "../../Abril/dia_98";
 
 const RotaUm: React.FC = () => {
   const songs = [
@@ -38,6 +39,7 @@ const RotaUm: React.FC = () => {
         <h1>My Music Player</h1>
         <Playlist songs={songs} />
       </div>
+      <Termometro temperatura={35} />
     </div>
   );
 };

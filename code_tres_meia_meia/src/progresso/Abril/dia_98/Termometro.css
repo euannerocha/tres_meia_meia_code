@@ -1,0 +1,21 @@
+.termometro {
+  width: 50px;
+  height: 200px;
+  border: 2px solid black;
+  position: relative;
+  background-color: #e0e0e0;
+}
+
+.temperatura {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+}
+
+.temperatura-atual {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  text-align: center;
+}
