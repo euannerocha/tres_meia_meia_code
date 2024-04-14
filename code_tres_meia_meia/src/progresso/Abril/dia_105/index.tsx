@@ -20,7 +20,7 @@
 // Saída: false
 
 function isValidParentheses(s: string): boolean {
-  let stack: string[] = [];
+  const stack: string[] = [];
 
   for (let char of s) {
     if (char === "(") {
