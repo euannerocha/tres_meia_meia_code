@@ -22,7 +22,7 @@
 function isValidParentheses(s: string): boolean {
   const stack: string[] = [];
 
-  for (let char of s) {
+  for (const char of s) {
     if (char === "(") {
       stack.push(char);
     } else if (char === ")") {
