@@ -13,7 +13,6 @@ export function validarSenha(senha: string): boolean {
   const temMaiuscula: boolean = /[A-Z]/.test(senha);
   const temMinuscula: boolean = /[a-z]/.test(senha);
   const semEspacos: boolean = !/\s/.test(senha);
-
   return (
     temOitoCaracteres && temNumero && temMaiuscula && temMinuscula && semEspacos
   );
