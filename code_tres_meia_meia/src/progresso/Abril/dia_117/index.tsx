@@ -1,44 +1,64 @@
-// Problema: Problema da Mochila (Knapsack Problem)
+// Problema: Encontrar o Caminho Mais Curto em um Grafo Ponderado e Direcionado
 
-// Dado um conjunto de itens, cada um com um peso e um valor, determinar a quantidade de cada item a ser incluído em uma mochila de capacidade limitada de forma a maximizar o valor total na mochila.
+// Dado um grafo direcionado e ponderado, com vértices e arestas, escreva uma função em TypeScript que encontre o caminho mais curto de um vértice de origem para um vértice de destino.
 
 // Descrição do Problema:
 
-// Dado um conjunto de itens, onde cada item tem um peso e um valor associado, e uma mochila com capacidade limitada, o problema consiste em determinar a quantidade de cada item a ser incluído na mochila de forma a maximizar o valor total, sem exceder a capacidade máxima da mochila.
+// Dado um grafo direcionado e ponderado, onde cada aresta tem um peso associado, encontre o caminho mais curto de um vértice de origem para um vértice de destino. O caminho mais curto é definido como o caminho com a menor soma dos pesos das arestas.
 
 // Objetivo:
 
-// Maximizar o valor total dos itens incluídos na mochila.
+// Encontrar o caminho mais curto de um vértice de origem para um vértice de destino.
 
-interface Item {
+interface Aresta {
+  origem: string;
+  destino: string;
   peso: number;
-  valor: number;
 }
 
-export function Mochila(capacidade: number, itens: Item[]): number {
-  const n = itens.length;
-  const dp: number[][] = Array.from({ length: n + 1 }, () =>
-    Array(capacidade + 1).fill(0)
-  );
+function dijkstra(arestas: Aresta[], origem: string, destino: string): number {
+  const grafos = new Map<string, Map<string, number>>();
+  for (const { origem, destino, peso } of arestas) {
+    if (!grafos.has(origem)) {
+      grafos.set(origem, new Map<string, number>());
+    }
+    grafos.get(origem)?.set(destino, peso);
+  }
 
-  for (let i = 1; i <= n; i++) {
-    const { peso, valor } = itens[i - 1];
-    for (let j = 1; j <= capacidade; j++) {
-      if (peso > j) {
-        dp[i][j] = dp[i - 1][j];
-      } else {
-        dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - peso] + valor);
+  const distancia: Map<string, number> = new Map<string, number>();
+  for (const vertice of grafos.keys()) {
+    distancia.set(vertice, Infinity);
+  }
+  distancia.set(origem, 0);
+
+  const visitados = new Set<string>();
+
+  while (visitados.size !== grafos.size) {
+    const verticeAtual = Array.from(distancia.entries())
+      .filter(([v]) => !visitados.has(v))
+      .reduce((a, b) => (a[1] < b[1] ? a : b))[0];
+    visitados.add(verticeAtual);
+
+    for (const [vizinho, peso] of grafos.get(verticeAtual) ||
+      new Map<string, number>()) {
+      const totalDistancia = distancia.get(verticeAtual)! + peso;
+      if (totalDistancia < (distancia.get(vizinho) || Infinity)) {
+        distancia.set(vizinho, totalDistancia);
       }
     }
   }
 
-  return dp[n][capacidade];
+  return distancia.get(destino)!;
 }
 
-const itens: Item[] = [
-  { peso: 2, valor: 10 },
-  { peso: 3, valor: 15 },
-  { peso: 5, valor: 20 },
+const arestas: Aresta[] = [
+  { origem: "A", destino: "B", peso: 1 },
+  { origem: "A", destino: "C", peso: 4 },
+  { origem: "B", destino: "C", peso: 2 },
+  { origem: "B", destino: "D", peso: 5 },
+  { origem: "C", destino: "D", peso: 1 },
+  { origem: "D", destino: "E", peso: 3 },
 ];
-const capacidade = 7;
-console.log("Valor máximo na mochila:", mochila(capacidade, itens));
+const origem = "A";
+const destino = "E";
+console.log("Distância mínima:", dijkstra(arestas, origem, destino));
