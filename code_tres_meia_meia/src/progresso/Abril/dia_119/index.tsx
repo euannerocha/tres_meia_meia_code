@@ -15,7 +15,7 @@ interface Item {
   valor: number;
 }
 
-export function Mochila(capacidade: number, itens: Item[]): number {
+function mochila(capacidade: number, itens: Item[]): number {
   const n = itens.length;
   const dp: number[][] = Array.from({ length: n + 1 }, () =>
     Array(capacidade + 1).fill(0)
@@ -35,10 +35,10 @@ export function Mochila(capacidade: number, itens: Item[]): number {
   return dp[n][capacidade];
 }
 
-const itens: Item[] = [
+const testeItens: Item[] = [
   { peso: 2, valor: 10 },
   { peso: 3, valor: 15 },
   { peso: 5, valor: 20 },
 ];
-const capacidade = 7;
-console.log("Valor máximo na mochila:", mochila(capacidade, itens));
+const testeCapacidade = 7;
+console.log("Valor máximo na mochila:", mochila(testeCapacidade, testeItens));
